@@ -1,6 +1,6 @@
 {
   "name": "@capacitor-community/device-check",
-  "version": "0.0.1",
+  "version": "6.0.0",
   "description": "Capacitor plugin for the DeviceCheck API",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
