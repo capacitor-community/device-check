@@ -4,7 +4,7 @@ import android.util.Log;
 
 public class CapacitorDeviceCheck {
 
-    public String generateToken() {        
+    public String generateToken() {
         return "";
     }
 }

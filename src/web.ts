@@ -4,7 +4,8 @@ import type { CapacitorDeviceCheckPlugin } from './definitions';
 
 export class CapacitorDeviceCheckWeb
   extends WebPlugin
-  implements CapacitorDeviceCheckPlugin {
+  implements CapacitorDeviceCheckPlugin
+{
   async generateToken(): Promise<{ token: string }> {
     return { token: '' };
   }
