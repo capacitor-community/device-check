@@ -12,7 +12,7 @@ public class CapacitorDeviceCheckPlugin extends Plugin {
     private CapacitorDeviceCheck implementation = new CapacitorDeviceCheck();
 
     @PluginMethod
-    public void generateToken(PluginCall call) {        
+    public void generateToken(PluginCall call) {
         JSObject ret = new JSObject();
         ret.put("token", implementation.generateToken());
         call.resolve(ret);
