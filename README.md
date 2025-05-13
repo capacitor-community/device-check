@@ -7,7 +7,7 @@ The DeviceCheck API is used to reduce fraudulent use of your services by managin
 
 This plugin calls the DeviceCheck API [`generateToken`](<https://developer.apple.com/documentation/devicecheck/dcdevice/generatetoken(completionhandler:)>) method which returns a token that your App's server must verify with Apple Servers.
 
-The call `generateToken` will return a `token` on success which you must send to your backend for verification. See [Apple's Docs on this](https://developer.apple.com/documentation/devicecheck/validating_apps_that_connect_to_your_server).
+The call `generateToken` will return a `token` on success which you must send to your backend for verification. See [Apple's Docs on this](https://developer.apple.com/documentation/devicecheck/validating-apps-that-connect-to-your-server).
 
 `token` is a base64 encoded string containing the token returned by []`DCDevice.current.generateToken`](https://developer.apple.com/documentation/devicecheck/dcdevice/generatetoken(completionhandler:)).
 
