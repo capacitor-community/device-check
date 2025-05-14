@@ -1,14 +1,18 @@
 import Foundation
 import Capacitor
-import DeviceCheck
 
 /**
  * Please read the Capacitor iOS Plugin Development Guide
  * here: https://capacitorjs.com/docs/plugins/ios
  */
 @objc(CapacitorDeviceCheckPlugin)
-public class CapacitorDeviceCheckPlugin: CAPPlugin {
-    @objc func generateToken(_ call: CAPPluginCall) {
+public class CapacitorDeviceCheckPlugin: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "CapacitorDeviceCheckPlugin"
+    public let jsName = "CapacitorDeviceCheck"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "generateToken", returnType: CAPPluginReturnPromise),
+    ]
+    @objc func generateToken(_ call: CAPPluginCall) {       
         guard DCDevice.current.isSupported == true else {
             call.reject("DeviceCheck is not supported on this device")
             return
